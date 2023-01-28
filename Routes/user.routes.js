@@ -3,15 +3,15 @@ const UserModel = require("../Model/User.model");
 const bcrypt=require("bcrypt");
 require("dotenv").config();
 const jwt=require("jsonwebtoken");
-const { authentication } = require("../middleware/authentication");
+// const { authentication } = require("../middleware/authentication");
 
 const userController=Router();
 
-userController.get("/getProfile/:userId",authentication, async(req, res)=>{
-    const UserId=req.body.userId;
-    var user = await UserModel.findOne({ _id:UserId });
-    res.send(user);
-})
+// userController.get("/getProfile/:userId",authentication, async(req, res)=>{
+//     const UserId=req.body.userId;
+//     var user = await UserModel.findOne({ _id:UserId });
+//     res.send(user);
+// })
 
 
 
